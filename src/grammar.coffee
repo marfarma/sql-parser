@@ -176,6 +176,7 @@ grammar =
   ]
 
   AggregateArgumentList: [
+    o 'STAR',                                            -> new Star()
     o 'ArgumentList',                                    -> new ArgumentListValue($1)
     o 'DISTINCT ArgumentList',                           -> new ArgumentListValue($2, true)
   ]
