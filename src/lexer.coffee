@@ -14,12 +14,12 @@ class Lexer
                        @sortOrderToken() or
                        @seperatorToken() or
                        @operatorToken() or
-                       @mathToken() or
                        @dotToken() or
                        @conditionalToken() or
                        @subSelectOpToken() or
                        @subSelectUnaryOpToken() or
                        @numberToken() or
+                       @mathToken() or
                        @stringToken() or
                        @parensToken() or
                        @whitespaceToken() or
@@ -132,7 +132,7 @@ class Lexer
   SEPARATOR           = /^,/
   WHITESPACE          = /^[ \n\r]+/
   LITERAL             = /^`?([a-z_][a-z0-9_]{0,})`?/i
-  NUMBER              = /^[0-9]+(\.[0-9]+)?/
+  NUMBER              = /^-?[0-9]+(\.[0-9]+)?/
   STRING              = /^'([^\\']*(?:\\.[^\\']*)*)'/
   DBLSTRING           = /^"([^\\"]*(?:\\.[^\\"]*)*)"/
 
